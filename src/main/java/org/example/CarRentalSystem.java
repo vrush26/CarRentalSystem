@@ -34,12 +34,13 @@ public class CarRentalSystem {
 
 
     }
+
     // Check if the car is available by ensuring none of its existing reservations overlap with the requested period
     private boolean isCarAvailable(LocalDateTime startDate, Car car, int days) {
         CurrentBookingEndDate = startDate.plusDays(days);
         for (Reservation Reservation : reservations) {
             if ((Reservation.getCar().equals(car.getCarType()) && Reservation.isOverLapWith(startDate, CurrentBookingEndDate))) {
-                return  true;
+                return true;
             }
         }
         return false;

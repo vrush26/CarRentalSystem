@@ -20,7 +20,7 @@ public class ReservationTest {
         today = LocalDate.now();
 
         system.addCar(new Sedan("Sedan"));
-        system.addCar(new Sedan("Sedan" ));
+        system.addCar(new Sedan("Sedan"));
         system.addCar(new Suv("Suv"));
         system.addCar(new Van("Van"));
     }
@@ -31,7 +31,7 @@ public class ReservationTest {
         assertEquals("Sedan", res.getCar());
     }
 
-  @Test
+    @Test
     public void testReservationConflict() throws Exception {
         system.reserveCar(3, "Van", today.atStartOfDay());
         Exception exception = assertThrows(Exception.class, () -> {
