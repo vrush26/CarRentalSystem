@@ -7,7 +7,7 @@ import java.util.List;
 
 public class CarRentalSystem {
 
-    private final List<Car> cars = new LinkedList<>();
+    private final List<Car> cars = new ArrayList<>();
     private final List<Reservation> reservations = new ArrayList<>();
     LocalDateTime CurrentBookingEndDate;
 
