@@ -43,9 +43,9 @@ public class ReservationTest {
 
     @Test
     public void testMultipleReservations() throws Exception {
-        Reservation res1 = system.reserveCar(1, "Sedan", today.atStartOfDay());
-        Reservation res2 = system.reserveCar(1, "Sedan", today.plusDays(1).atStartOfDay());
-        Reservation res3 = system.reserveCar(1, "Sedan", today.atStartOfDay());
+          system.reserveCar(1, "Sedan", today.atStartOfDay());
+          system.reserveCar(1, "Sedan", today.plusDays(1).atStartOfDay());
+          system.reserveCar(1, "Sedan", today.atStartOfDay());
 
     }
 
